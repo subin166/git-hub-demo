@@ -1,21 +1,21 @@
----
 name: git actions
-  on:
-    push:
-      branch:
-        -main 
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: os release
-        run: cat /etc/osrelease
-      
-      - name: free memory
+      - name: OS release
+        run: cat /etc/os-release
+
+      - name: Free memory
         run: free -h
 
-      - name: date now
+      - name: Date now
         run: date
-        
 
