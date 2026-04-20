@@ -20,6 +20,6 @@ jobs:
       - name: "unzip file"
         run: unzip packer_1.15.1_linux_amd64.zip
       - name: "moving to local"
-        run: mv packer_1.15.1_linux_amd64 /usr/local/bin
+        run: mv packer /usr/local/bin
       - name: "version check"
         run: packer --version
