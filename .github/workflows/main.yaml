@@ -7,7 +7,7 @@ on:
 jobs:
   bash-commands:
     runs-on: ubuntu-latest
-  steps:
+    steps:
     - name: "datecommand"
       run: date
     - name: "memory"
