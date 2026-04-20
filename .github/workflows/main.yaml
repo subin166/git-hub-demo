@@ -12,3 +12,14 @@ jobs:
       run: date
     - name: "memory"
       run: free -h
+  packer-install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "download binary file"
+        run: wget https://releases.hashicorp.com/packer/1.15.1/packer_1.15.1_linux_amd64.zip
+      - name: "unzip file"
+        run: unzip packer_1.15.1_linux_amd64.zip
+      - name: "moving to local"
+        run: mv packer_1.15.1_linux_amd64 /usr/local/bin
+      - name: "version check"
+        run: packer --version
