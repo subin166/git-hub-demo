@@ -1,21 +1,14 @@
-name: git actions
-
+---
+name: "system rersource details"
 on:
   push:
     branches:
       - main
-
 jobs:
-  build-and-test:
+  bash-commands:
     runs-on: ubuntu-latest
-
-    steps:
-      - name: OS release
-        run: cat /etc/os-release
-
-      - name: Free memory
-        run: free -h
-
-      - name: Date now
-        run: date
-
+  steps:
+    - name: "datecommand"
+      run: date
+    - name: "memory"
+      run: free -h
